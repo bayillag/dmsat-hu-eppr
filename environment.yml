@@ -1,0 +1,47 @@
+name: dmsat-hu-eppr
+channels:
+  - conda-forge
+  - defaults
+  - r
+dependencies:
+  # Core Python
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - jupyterlab
+  - geopandas
+  - rasterio
+  - fiona
+
+  # R and IRkernel
+  - r-base=4.1
+  - r-essentials
+  - r-irkernel
+  - r-tidyverse
+  - r-sf
+  - r-lubridate
+  - r-rmarkdown
+
+  # QGIS and spatial analysis
+  - qgis=3.28
+  - gdal=3.4
+  - grass=8.2
+  - saga=9.0
+
+  # Additional tools
+  - git
+  - wget
+  - unzip
+
+  # Python packages via pip
+  - pip:
+    - pyqgis
+    - qgis-processing
+    - rpy2
+    - redcap-py
+    - dhis2-py

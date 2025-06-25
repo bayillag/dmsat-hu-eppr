@@ -1,0 +1,26 @@
+{
+  "name": "DMSAT-HU-EPPR",
+  "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {},
+    "ghcr.io/devcontainers-contrib/features/qgis:1": {
+      "version": "3.28"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "quarto.quarto",
+        "reditorsupport.r",
+        "qgis.qgis"
+      ],
+      "settings": {
+        "python.condaPath": "/opt/conda/bin/conda"
+      }
+    }
+  },
+  "forwardPorts": [8888, 8787],
+  "remoteUser": "codespace"
+}
